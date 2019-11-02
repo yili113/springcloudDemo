@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-consumer" />
+        <module name="cqupt-eureka" />
+        <module name="service-provider" />
+        <module name="cqupt-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cqupt-eureka" target="1.8" />
+      <module name="cqupt-zuul" target="1.8" />
+      <module name="service-consumer" target="1.8" />
+      <module name="service-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cqupt-eureka" options="-parameters" />
+      <module name="cqupt-zuul" options="-parameters" />
+      <module name="service-consumer" options="-parameters" />
+      <module name="service-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

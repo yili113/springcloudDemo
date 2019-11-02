@@ -1,0 +1,15 @@
+server:
+  port: 10010 #服务端口
+spring:
+  application:
+    name: api-gateway #指定服务名
+zuul:
+  routes:
+    service-provider: /service-prodiver/** # 路由名称 可以随便写 习惯上写服务名
+      #path: /service-provider/** # 这里是映射路径
+      #url: http://localhost:8084 # 映射路径对应的实际url地址
+  prefix: /api #指定了能清楚知道是zuul网关路由的  规范
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
